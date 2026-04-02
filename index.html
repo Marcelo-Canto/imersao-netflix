@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- O código HTML é a estrutura básica de uma página web. Ele define a estrutura e o conteúdo da página.-->
+
+<head> <!-- A tag head contém informações sobre o documento, metadados e links para arquivos externos, é o manual do navegador -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo, que é responsável pela aparência da página -->
+</head>
+
+<body> <!-- A tag body contém o conteúdo visível da página, como texto, imagens, vídeos e outros elementos. -->
+  <main> <!-- área principal -->
+    <button class="theme-toggle" aria-label="Alternar tema">🌙 Tema</button>
+    <h1>Netflix Imersão</h1> <!-- título central -->
+
+    <section class="profiles"> <!-- container de perfis -->
+      <ul class="perfil" id="profiles-list" role="list" aria-label="Perfis de usuário"></ul>
+    </section>
+
+    <div class="buttons">
+      <button id="manage-profiles-btn" class="btn">Gerenciar perfis</button>
+    </div>
+
+    <section class="profile-manager hidden" id="profile-manager" aria-hidden="true">
+      <h2>Gerenciar perfis</h2>
+      <p>Clique em um perfil para editar nome e avatar.</p>
+      <button id="close-manager-btn" class="btn">Fechar gerenciamento</button>
+
+      <div id="profiles-admin-container">
+        <h3>Perfis atuais</h3>
+        <ul id="profiles-admin-list"></ul>
+      </div>
+
+      <form id="profile-form" class="hidden">
+        <input type="hidden" id="profile-id" value="" />
+
+        <div>
+          <label for="profile-name">Nome do perfil</label>
+          <input type="text" id="profile-name" placeholder="Digite um nome" required maxlength="16" />
+        </div>
+
+        <div>
+          <label>Avatar</label>
+          <div id="avatar-gallery" class="avatar-gallery"></div>
+        </div>
+
+        <div class="buttons">
+          <button id="save-profile-btn" class="btn" type="submit">Salvar alterações</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
