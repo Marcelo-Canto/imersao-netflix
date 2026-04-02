@@ -1,6 +1,7 @@
 export const categories = [
   {
     title: "Épicos",
+
     items: [
       {
         img: "https://saocarlosnotoque.com/wp-content/uploads/2025/05/karate-kids-lendas.png",
